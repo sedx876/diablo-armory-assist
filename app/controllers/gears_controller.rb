@@ -12,6 +12,7 @@ class GearsController < ApplicationController
   #Make a get request to '/gears'
 
   get '/gears' do
+    @gears = Gear.all
       erb :'gears/index'
   end
 
