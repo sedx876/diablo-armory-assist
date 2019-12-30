@@ -1,1 +1,45 @@
 <h1><%= @gear.title %></h1>
+
+<br>
+<h2>Character Class: <%= @gear.character_klass %></h2>
+<br>
+<h2>Helm: <%= @gear.helm %></h2>
+<br>
+<h2>Shoulders: <%= @gear.shoulders %></h2>
+<br>
+<h2>Gloves: <%= @gear.gloves %></h2>
+<br>
+<h2>Chest Armor: <%= @gear.chest_armor %></h2>
+<br>
+<h2>Belt: <%= @gear.belt %></h2>
+<br>
+<h2>Pants: <%= @gear.pants %></h2>
+<br>
+<h2>Boots: <%= @gear.boots %></h2>
+<br>
+<h2>Bracers: <%= @gear.bracers %></h2>
+<br>
+<h2>Amulet: <%= @gear.amulet %></h2>
+<br>
+<h2>Ring 1: <%= @gear.ring_1 %></h2>
+<br>
+<h2>Ring 2: <%= @gear.ring_2 %></h2>
+<br>
+<h2>Weapon: <%= @gear.weapon %></h2>
+<br>
+<h2>Offhand: <%= @gear.offhand %></h2>
+<br>
+<h2>Gem Notes: <%= @gear.gem_notes %></h2>
+<br>
+<h2>Kanai's Cube: <%= @gear.kanais_cube %></h2>
+<br>
+<h2>Active Skills: <%= @gear.active_skills %></h2>
+<br>
+<h2>Passive Skills: <%= @gear.passive_skills %></h2>
+<br>
+<h2>General Build Notes: <%= @gear.general_build_notes %></h2>
+<br>
+<form action="/gears/<%= @gear.id %>" method="post">
+  <input type="hidden" name="_method" value="delete">
+  <button type="submit">Delete Build</button>
+</form>

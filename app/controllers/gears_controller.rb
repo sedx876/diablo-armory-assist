@@ -13,9 +13,11 @@ end
 
 post '/gears' do
   gear = Gear.new(params)
-  if gear.save
+  if !gear.title.empty?
+    gear.save
     redirect '/gears' 
   else
+    @error = "To build your Build, You have to at least start with a Build Name"
     erb :'/gears/new'
 end
 end
