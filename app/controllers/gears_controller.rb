@@ -2,10 +2,23 @@ class GearsController < ApplicationController
 
 #CREATE
   #New
-    #Make a ger request '/'
+    #Make a get request '/'
+
+get '/gears/new' do
+  erb :'gears/new'
+end
 
   #Create
     #make a post request to '/gears'
+
+post '/gears' do
+  gear = Gear.new(params)
+  if gear.save
+    redirect '/gears' 
+  else
+    erb :'/gears/new'
+end
+end
 
 #READ
   #Index
