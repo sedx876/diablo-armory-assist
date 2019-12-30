@@ -11,13 +11,18 @@ class GearsController < ApplicationController
   #Index
   #Make a get request to '/gears'
 
-  get '/gears' do
-    @gears = Gear.all
-      erb :'gears/index'
-  end
+get '/gears' do
+  @gears = Gear.all
+  erb :'gears/index'
+end
 
 #Show
   #Make a get request to '/gears/:id'
+get '/gears/:id' do
+    @gear = Gear.find(params["id"])
+    erb :'gears/show'
+end
+
 
 #UPDATE
   #Edit
