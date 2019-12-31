@@ -6,4 +6,3 @@ Gear.create(title: 'Aegis of Valor Heavens Fury', character_klass: 'Crusader', h
 
 Gear.create(title: 'Vyr Archon', character_klass: 'Wizard', helm: 'Vyr Sightless Skull', shoulders: 'Vyr Proud Pauldrons', gloves: 'Vyr Grasping Gauntlets', chest_armor: 'Vyr Astonishing Aura', belt: 'Fazula Improbable Chain', pants: 'Vyr Fantastic Finey', boots: 'Vyr Swaggering Stance', bracers: 'Ashnagarr Blood Bracers', amulet: 'Squirt Necklace', ring_1: 'Halo of Karini', ring_2: 'Convention of Elements', weapon: 'Chantodo Will', offhand: 'Chantodo Force', gem_notes: 'Bane of the Trapped-Gogok of Swiftness-Bane of the Stricken', kanais_cube: 'The Furnace-The Swami-Obsidian Ring of Zodiac', active_skills: 'Arcane Torrent-Teleport-Archon-Black Hole-Storm Armor-Magic Weapon', passive_skills: 'Evocation-Unstable Anomaly-Unwavering Will-Audacity', general_build_notes: 'Switch out Squirt Necklace for Ouroboros Ammy')
 
-User.create(username: 'sharon', password_digest: 'abc123')
