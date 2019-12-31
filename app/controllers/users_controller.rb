@@ -1,2 +1,21 @@
 class UsersController < ApplicationController
+
+
+get '/signup' do
+  erb :'users/signup'
+end
+
+post '/signup' do
+  user = User.new(params)
+  if user.username.empty? || user.password_digest.empty?
+    @error = "You need a Username and Password before getting started"
+    erb :'users/signup'
+  else
+    user.save
+    session[:user_id] = user.id
+    redirect '/gears'
+  end
+end
+
+
 end
