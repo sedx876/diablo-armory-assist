@@ -17,8 +17,7 @@ end
 
 post '/gears' do
   gear = current_user.gears.build(params)
-  if !gear.title.empty?
-    gear.save
+  if gear.save
     redirect '/gears'
   else
     @error = "To build your Build, You have to at least start with a Build Name"
