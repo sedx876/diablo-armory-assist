@@ -1,19 +1,15 @@
 class GearsController < ApplicationController
 
-# before do
-#   require_login
-# end
+before do
+  require_login
+end
 
 #CREATE
   #New
     #Make a get request '/'
 
 get '/gears/new' do
-  if logged_in?
-    erb :'gears/new'
-  else
-    redirect '/login'
-  end
+  erb :'/gears/new'
 end
 
   #Create
@@ -35,22 +31,18 @@ end
   #Make a get request to '/gears'
 
 get '/gears' do
-  if logged_in?
     @gears = Gear.all
     erb :'gears/index'
-  else
-    redirect '/login'
-  end
 end
 
 #Show
   #Make a get request to '/gears/:id'
 get '/gears/:id' do
-  if logged_in?
-    @gear = Gear.find(params[:id])
+    @gear = Gear.find_by(id: params[:id])
+  if @gear
     erb :'gears/show'
   else
-    redirect '/login'
+    redirect '/gears'
   end
 end
 
@@ -60,12 +52,8 @@ end
     #Make a get request to '/gears/:id/edit'
 
 get '/gears/:id/edit' do
-  if logged_in?
     @gear = Gear.find(params[:id])
     erb :'/gears/edit'
-  else
-    redirect '/login'
-  end
 end
   #Update
     #Make a patch request to '/gears/:id'
