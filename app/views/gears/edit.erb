@@ -1,0 +1,74 @@
+<h1>Edit Your Build</h1>
+<br>
+<h3><%= @error %></h3>
+<br>
+<form action="/gears/<%=@gear.id%>" method="post">
+<input type="hidden" name="_method" value="patch">
+<label>Build Name: </label>
+ <input type="text" name="gear[title]">
+ <br><br>
+ <label>Character Class: </label>
+    <input type="radio" name="gear[character_klass]" value="Demon Hunter"><span>Demon Hunter<span>
+    <input type="radio" name="gear[character_klass]" value="Crusader"> <span>Crusader<span>
+    <input type="radio" name="gear[character_klass]" value="Barbarian"> <span>Barbarian<span>
+    <input type="radio" name="gear[character_klass]" value="Necromancer"> <span>Necromancer<span>
+    <input type="radio" name="gear[character_klass]" value="Witch Doctor"> <span>Witch Doctor<span>
+    <input type="radio" name="gear[character_klass]" value="Wizard"> <span>Wizard<span>
+    <input type="radio" name="gear[character_klass]" value="Monk"> <span>Monk<span>
+  <br><br>
+  <label>Helm: </label>
+    <input type="text" name="gear[helm]">
+  <br><br>
+  <label>Shoulders: </label>
+    <input type="text" name="gear[shoulders]">
+  <br><br>
+  <label>Gloves: </label>
+    <input type="text" name="gear[gloves]">
+  <br><br>
+  <label>Chest Armor: </label>
+    <input type="text" name="gear[chest_armor]">
+  <br><br>
+  <label>Belt: </label>
+    <input type="text" name="gear[belt]">
+  <br><br>
+  <label>Pants: </label>
+    <input type="text" name="gear[pants]">
+  <br><br>
+  <label>Boots: </label>
+    <input type="text" name="gear[boots]">
+  <br><br>
+  <label>Bracers: </label>
+    <input type="text" name="gear[bracers]">
+  <br><br>
+  <label>Amulet: </label>
+    <input type="text" name="gear[amulet]">
+  <br><br>
+  <label>Ring 1: </label>
+    <input type="text" name="gear[ring_1]">
+  <br><br>
+  <label>Ring 2: </label>
+    <input type="text" name="gear[ring_2]">
+  <br><br>
+  <label>Weapon: </label>
+    <input type="text" name="gear[weapon]">
+  <br><br>
+  <label>Offhand: </label>
+    <input type="text" name="gear[offhand]">
+  <br><br>
+  <label>Gem Notes: </label>
+    <textarea name="gear[gem_notes]"></textarea>
+  <br><br>
+  <label>Kanai's Cube: </label>
+    <textarea name="gear[kanais_cube]"></textarea>
+  <br><br>
+  <label>Active Skills and Runes: </label>
+    <textarea name="gear[active_skills]"></textarea>
+  <br><br>
+  <label>Passive Skills: </label>
+    <textarea name="gear[passive_skills]"></textarea>
+  <br><br>
+  <label>General Build Notes: </label>
+    <textarea name="gear[general_build_notes]"></textarea>
+  <br><br>
+  <button type="submit">Edit Build</button>
+</form>
