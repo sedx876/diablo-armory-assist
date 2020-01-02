@@ -15,22 +15,28 @@
     <link href="https://fonts.googleapis.com/css?family=Indie+Flower|Lacquer&display=swap" rel="stylesheet">
   </head>
   <body>
-  <header class="ban"><img src="/images/daaban5.png"></header>
+  <div class="container">
     <nav class="navvy">
-      <div class="container-fluid">
+      <div class="fluid">
         <ul>
-          
+        <li><img src="/images/daaban6.png"></li>
           <% if logged_in? %>
-            <li><a href="/gears">Build</a></li>
+            <li><a href="/gears">Builds</a></li>
+            <label>//</label>
+            <li><a href="/gears/new">Create a Build</a></li>
+            <label>//</label>
             <li><a href="/logout">Log Out</a></li>
           <% else %>
             <li><a href="/signup">Sign Up</a></li>
+            <label>//</label>
             <li><a href="/login">Log In</a></li>
           <% end %>
+          <label>//</label>
             <li><a href="/">Main</a><li>
         </ul>
       </div>
     </nav>
+    </div>
     <div class="wrapper">
 
         <%= yield %>

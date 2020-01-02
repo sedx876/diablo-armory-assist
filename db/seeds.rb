@@ -1,4 +1,5 @@
 Gear.destroy_all
+User.destroy_all
 
 Gear.create(title: 'Unhallowed Essence', character_klass: 'Demon Hunter', helm: 'Accursed Visage', shoulders: 'Unsanctified Shoulders', gloves: 'Fiendish Grips', chest_armor: 'Cage of the Hellborn', belt: 'Captain Crimson Silk Girdle', pants: 'Captain Crimson Thrust', boots: 'Hell Walkers', bracers: 'Wraps of Clarity', amulet: 'Squirt Necklace', ring_1: 'Focus', ring_2: 'Restraint', weapon: 'Yang Recurve', offhand: 'Dead Man Legacy', gem_notes: 'Bane of the Trapped-Zei Stone of Vengence-Bane of the Stricken', kanais_cube: 'Dawn-Visage of Gunes-Ring of Royal Grandeur', active_skills: 'Evasive Fire-Multishot-Preperation-Vengence-Vault-Companion', passive_skills: 'Ambush-Thrill of the Hunt-Cull of the Weak-Ballistics', general_build_notes: 'Can run upto Greater Rift 80')
 

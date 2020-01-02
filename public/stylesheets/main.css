@@ -15,32 +15,47 @@
   /* --- Welcome Page Styles --- */
   body {
     /*background-color: red;*/
-    background-image: url('/images/020.jpg');
+    background-image: url('/images/021.jpg');
     background-size: cover;
-    background-repeat: no-repeat;
+    /*background-repeat: no-repeat;*/
     color: black;
     font-family: Lacquer, sans-serif;
    /* line-height: 18px;*/
   }
+
+  .container {
+    display: flex;
+    flex-direction: row;
+    font-size: 20px;
+  }
+
+  .fluid {
+    order: 2;
+  }
+
+  .ban {
+    padding: 0rem;
+    text-align: left;
+    order: 1;
+  }
+
 
   #start {
     font-weight: bolder;
     text-decoration: underline;
   }
 
-  .ban {
-    padding: 0rem;
-    text-align: left;
-  }
 
   li {
+    order: 2;
     display: inline;
-    font-size: 35px;
-    padding: 0px, 80px, 70px, 100px;
-    margin: 0px, 20px, 50px, 80px;
+    font-size: 20px;
+    padding: 0px, 80px, 50px, 100px;
+    margin: 0px, 20px, 30px, 80px;
   }
 
   .welcome {
+    font-size: 50px;
     text-align: center;
     text-decoration: underline;
   }

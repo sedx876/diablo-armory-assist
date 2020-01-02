@@ -1,8 +1,9 @@
-<h1><strong>Builds</strong></h1>
-<a href="/gears/new">Create a Build</a>
+<h1 id="start">Builds</h1>
+<label>/////</label>
 <% @gears.each do |gear| %>
   <h2><a href="/gears/<%= gear.id %>"><%= gear.title %></a></h2>
+  <label>//</label>
   <% if gear.user && current_user == gear.user %>
-    <a href="/gears/<%= gear.id %>/edit">Edit Build</a>
+  <button><a href="/gears/<%= gear.id %>/edit">Edit Build</a></button>
 <% end %>
 <% end %>
