@@ -41,6 +41,6 @@
 <form action="/gears/<%= @gear.id %>" method="post">
   <input type="hidden" name="_method" value="delete">
   <% if @gear.user == current_user %>
-  <button type="submit" id="btn">Delete Build</button>
+  <button type="submit">Delete Build</button>
   <% end %>
 </form>
