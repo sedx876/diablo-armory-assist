@@ -34,13 +34,21 @@ end
 
 get '/gears/:id/edit' do
   @gear = Gear.find(params[:id])
-  erb :'/gears/edit'
+  if authorize(@gear)
+    erb :'/gears/edit'
+  else
+    redirect :'/gears'
+  end
 end
 
 patch '/gears/:id' do
   @gear = Gear.find(params[:id])
-  @gear.update(params["gear"])
+  if authorize(@gear)
+    @gear.update(params["gear"])
   redirect "/gears/#{params[:id]}"
+  else
+    redirect '/gears/:id'
+  end
 end
 
 delete '/gears/:id' do
